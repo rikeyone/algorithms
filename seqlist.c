@@ -1,3 +1,9 @@
+/*
+ * 顺序表
+ *
+ */
+
+
 #include <string.h>
 #include <stdio.h>
 

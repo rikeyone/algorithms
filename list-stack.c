@@ -1,4 +1,5 @@
 /* list based stack */
+//链表堆栈
 
 #include <stdio.h>
 #include <stdlib.h>

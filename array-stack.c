@@ -1,4 +1,5 @@
 /*array stack */
+//数组堆栈
 #include <stdio.h>
 
 #define STACK_SIZE 20

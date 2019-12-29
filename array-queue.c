@@ -1,5 +1,5 @@
 //1.array queue
-//2.list queue
+// 数组队列
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
