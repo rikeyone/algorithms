@@ -110,6 +110,31 @@ void postorder_iter(struct bnode *node)
 	}
 }
 
+int max_depth(struct bnode *node)
+{
+	int left, right;
+	if (node == NULL) {
+		return 0;
+	}
+	left = max_depth(node->left) + 1;
+	right = max_depth(node->right) + 1;
+	return left > right ? left : right;
+}
+
+int min_depth(struct bnode *node)
+{
+	int left, right;
+	if (node == NULL)
+		return 0;
+	if (node->left == NULL)
+		return min_depth(node->right) + 1;
+	if (node->right == NULL)
+		return min_depth(node->left) + 1;
+
+	left = min_depth(node->left) + 1;
+	right = min_depth(node->right) + 1;
+	return left < right ? left : right;
+}
 
 int main(int argc, char *argv[])
 {
@@ -131,6 +156,7 @@ int main(int argc, char *argv[])
 	postorder_iter(tree);
 	printf("\n");
 
+	printf("max depth:%d, min depth:%d\n", max_depth(tree), min_depth(tree));
 	/* TODO: free node*/
 
 	return 0;
