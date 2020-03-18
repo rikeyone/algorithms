@@ -2,7 +2,7 @@
 
 //x^3 = a
 //f(x) = x^3 -a
-//X(k+1) = X(k) + f(x)/f(x)'
+//X(k+1) = X(k) - f(x)/f(x)'
 #define ABS(x) (((x) > 0) ? (x) : (0 - x))
 double cuberoot(double value)
 {

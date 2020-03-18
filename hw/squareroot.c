@@ -1,5 +1,13 @@
 #include <math.h>
 #include <stdio.h>
+/*
+ * f(x) = x^2 - a
+ *
+ * x = x - f(x)/f(x)'
+ *
+ * x = x - ((x^2 -a)/(2*x)) = (x + a / x) / 2
+ *
+ * */
 int main(void)
 {
     float a, x1, check;
