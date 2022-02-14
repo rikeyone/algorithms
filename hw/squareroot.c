@@ -1,11 +1,17 @@
 #include <math.h>
 #include <stdio.h>
 /*
+ * 某个点x0处的导数，就相当于是x0处切线的斜率k
+ * delta(y) = delta(x) * k
+ * 
+ * y1 - y0 = (x1 - x0) * k
+ * 0 - f(x0) = (x1 - x0) * k
+ * -f(x0) / k = x1 - x0
+ * x1 = x0 - f(x0)/f(x0)'
+ *
  * f(x) = x^2 - a
- *
- * x = x - f(x)/f(x)'
- *
- * x = x - ((x^2 -a)/(2*x)) = (x + a / x) / 2
+ * x1 = x0 - f(x0)/f(x0)'
+ * x1 = x0 - ((x0^2 -a)/(2*x0)) = (x0 + a / x0) / 2
  *
  * */
 int main(void)
